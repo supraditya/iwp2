@@ -4,6 +4,13 @@
     margin: 0 !important;
 }
 
+#mainFrame {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(102, 99, 99, 0.733);
+    overflow: hidden !important;
+}
+
 .navList {
     width: 100%;
 }
