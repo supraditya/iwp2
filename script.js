@@ -48,3 +48,20 @@ function begin(num) {
   }
   setInterval(dateTime, 1000);
 }
+function blogAlert() {
+  console.log("Clicked");
+  var id = document.getElementById("emailinput").value;
+  var con = document.getElementById("contactinput").value;
+
+  var flag1 = 0;
+  var flag2 = 0;
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(id)) {
+    flag1 = 1;
+  }
+  if (/^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/.test(con)) {
+    flag2 = 1;
+  }
+  if (flag1 === 1 && flag2 === 1) {
+    alert("Submission successful.\n\nEmail: " + id + "\nContact: " + con);
+  }
+}
