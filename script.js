@@ -83,7 +83,7 @@ function contactSubmit() {
   if (/^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/.test(conph)) {
     flag3 = 1; //Phone is valid
   }
-  if (/^$|\s+/.test(conmsg)) {
+  if (conmsg === "") {
     flag4 = 0; //Message box is empty
   }
   if (flag1 == 1 && flag2 == 1 && flag3 == 1 && flag4 == 1) {
@@ -92,5 +92,9 @@ function contactSubmit() {
     alert(
       "One or more invalid inputs.\n\n Please note that:\n\n 1. A name cannot contain a number\n 2. The message box cannot be empty."
     );
+    console.log(flag1);
+    console.log(flag2);
+    console.log(flag3);
+    console.log(flag4);
   }
 }
