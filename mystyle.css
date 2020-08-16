@@ -223,3 +223,8 @@ input {
   border: none;
   box-shadow: 0px 8px 8px #555;
 }
+#welcome {
+  color: white;
+  font-size: 48px;
+  margin-left: 6%;
+}
