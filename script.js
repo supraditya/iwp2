@@ -65,3 +65,32 @@ function blogAlert() {
     alert("Submission successful.\n\nEmail: " + id + "\nContact: " + con);
   }
 }
+function contactSubmit() {
+  var conid = document.getElementById("contactname").value;
+  var conemail = document.getElementById("contactemail").value;
+  var conph = document.getElementById("contactphone").value;
+  var conmsg = document.getElementById("textbox").value;
+  var flag1 = 0;
+  var flag2 = 0;
+  var flag3 = 0;
+  var flag4 = 1;
+  if (/^[a-zA-Z ]*$/.test(conid)) {
+    flag1 = 1; //Name is valid
+  }
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(conemail)) {
+    flag2 = 1; //Email is valid
+  }
+  if (/^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/.test(conph)) {
+    flag3 = 1; //Phone is valid
+  }
+  if (/^$|\s+/.test(conmsg)) {
+    flag4 = 0; //Message box is empty
+  }
+  if (flag1 == 1 && flag2 == 1 && flag3 == 1 && flag4 == 1) {
+    alert("Submission successful!");
+  } else {
+    alert(
+      "One or more invalid inputs.\n\n Please note that:\n\n 1. A name cannot contain a number\n 2. The message box cannot be empty."
+    );
+  }
+}

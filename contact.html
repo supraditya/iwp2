@@ -73,14 +73,14 @@
       <h1 class="text" style="margin-bottom: 4%;">
         First, Tell Me About Yourself
       </h1>
-      <form action="#" target="__self">
-        <input type="text" placeholder="Name" />
+      <form action="#">
+        <input type="text" placeholder="Name" id="contactname" />
         <br />
         <br />
-        <input type="text" placeholder="Email" />
+        <input type="text" placeholder="Email" id="contactemail" />
         <br />
         <br />
-        <input type="text" placeholder="Contact" />
+        <input type="text" placeholder="Contact" id="contactphone" />
         <br />
         <br />
         <textarea
@@ -93,7 +93,15 @@
         <br />
         <br />
         <input id="resetButton" type="reset" value="Reset" />
-        <input id="submitButton" type="submit" value="Submit" />
+        <!-- <input
+          id="submitButton"
+          onclick="contactSubmit();"
+          type="submit"
+          value="Submit"
+        /> -->
+        <button id="submitButton" onclick="contactSubmit();">
+          Submit
+        </button>
       </form>
     </div>
   </body>
