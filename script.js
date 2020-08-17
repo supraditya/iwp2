@@ -94,7 +94,7 @@ function contactSubmit() {
   }
 }
 function search() {
-  // console.log("Triggered search");
+  //Function hightlights the html element in which keyword was found, case insensitive search
   var highlight = document.querySelectorAll(".blogcontent");
   var str1 = document.getElementById("searchinput").value;
   str1 = str1.toLowerCase();
