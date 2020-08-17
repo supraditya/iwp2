@@ -246,3 +246,17 @@ input {
   font-size: 24px !important;
   border: none;
 }
+.blogsearch {
+  padding: 2% 2% 0 0;
+  text-align: center;
+  width: 53%;
+  /* border: solid 1px red; */
+}
+#searchinput {
+  height: 40px;
+  width: 85%;
+  color: white;
+  padding: 5px 5px 5px 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: solid 4px white;
+}

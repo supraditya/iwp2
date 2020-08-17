@@ -49,7 +49,6 @@ function begin(num) {
   setInterval(dateTime, 1000);
 }
 function blogAlert() {
-  console.log("Clicked");
   var id = document.getElementById("emailinput").value;
   var con = document.getElementById("contactinput").value;
 
@@ -92,9 +91,29 @@ function contactSubmit() {
     alert(
       "One or more invalid inputs.\n\n Please note that:\n\n 1. A name cannot contain a number\n 2. The message box cannot be empty."
     );
-    console.log(flag1);
-    console.log(flag2);
-    console.log(flag3);
-    console.log(flag4);
+  }
+}
+function search() {
+  // console.log("Triggered search");
+  var highlight = document.querySelectorAll(".blogcontent");
+  var str1 = document.getElementById("searchinput").value;
+  str1 = str1.toLowerCase();
+  var i = 0;
+  for (i = 0; i < highlight.length; i++) {
+    if (highlight[i].textContent.toLowerCase().search(str1) != -1) {
+      highlight[i].style.backgroundColor = "yellow";
+      highlight[i].style.color = "black";
+    } else if (highlight[i].textContent.toLowerCase().search(str1) === -1) {
+      highlight[i].style.backgroundColor = "transparent";
+      highlight[i].style.color = "white";
+    }
+  }
+
+  //Clears highlights if inputs are empty
+  if (str1 === "") {
+    for (i = 0; i < highlight.length; i++) {
+      highlight[i].style.backgroundColor = "transparent";
+      highlight[i].style.color = "white";
+    }
   }
 }
